@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>J Gateway 在售房源推荐</title>
+<style>
+:root{color-scheme:light;--bg:#F2F5F6;--card:#FFFFFF;--ink:#13222B;--ink2:#46565F;--mut:#6F7E87;--rule:#DCE3E7;
+--ac:#1B5E7A;--acs:#E1EDF2;--wa:#8C5E0E;--was:#F5ECD9;--ng:#A23B2A;--ngs:#F7E6E2;--ok:#2F6B3A;--oks:#E3F0E5;
+--ff:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC","Segoe UI",sans-serif;
+--fs:"Songti SC","Noto Serif SC","STSong",Georgia,serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root{color-scheme:dark;--bg:#0E1418;--card:#151D22;--ink:#E6EDF0;--ink2:#A9B6BD;--mut:#85939B;--rule:#26323A;
+--ac:#5DB3D3;--acs:#15303C;--wa:#D4A752;--was:#2D2516;--ng:#E58A75;--ngs:#33201B;--ok:#7CC48A;--oks:#1A2E1E}}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--ff);font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased;font-variant-numeric:tabular-nums}
+.wrap{max-width:860px;margin:0 auto;padding:28px 16px 48px}
+h1{font-family:var(--fs);font-size:clamp(22px,5.4vw,30px);line-height:1.3;margin:0}
+h2{font-family:var(--fs);font-size:20px;margin:30px 0 10px}
+.sub{color:var(--mut);font-size:13px;margin:8px 0 16px}
+.lead{font-size:16px;margin:0 0 14px}
+.lead b{color:var(--ac)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin:16px 0 4px}
+.facts div{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:9px 12px;font-size:13px;color:var(--ink2)}
+.facts b{display:block;color:var(--ink);font-size:15px}
+.card{background:var(--card);border:1px solid var(--rule);border-radius:12px;padding:16px;margin-top:14px}
+.top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;flex-wrap:wrap}
+.tag{font-size:12px;font-weight:700;border-radius:4px;padding:0 7px;line-height:20px;white-space:nowrap;display:inline-block}
+.t-ac{color:var(--ac);background:var(--acs)} .t-wa{color:var(--wa);background:var(--was)} .t-ok{color:var(--ok);background:var(--oks)} .t-ng{color:var(--ng);background:var(--ngs)}
+.card h3{font-size:17px;margin:0}
+.no{font-family:var(--fs);color:var(--ac);margin-right:6px}
+.price{font-size:24px;font-weight:700;margin:8px 0 0;letter-spacing:-.01em}
+.psf{font-size:13px;color:var(--ink2);margin:0}
+.cmp{margin:12px 0 0;background:var(--bg);border-radius:9px;padding:10px 12px;font-size:13.5px}
+.cmp .h{font-size:12px;color:var(--mut);margin-bottom:2px}
+.cmp .d{font-weight:700;margin-top:4px}
+.pc{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+@media (max-width:480px){.pc{grid-template-columns:1fr}}
+.pc div{font-size:13.5px}
+.pc .h{font-size:12px;font-weight:700;margin-bottom:2px}
+.pc .pro .h{color:var(--ok)} .pc .con .h{color:var(--wa)}
+.pc ul{margin:0;padding-left:1.1em} .pc li{margin:2px 0}
+.ask{margin-top:12px;border-top:1px dashed var(--rule);padding-top:10px;font-size:13.5px;color:var(--ink2)}
+.ask b{color:var(--ink)}
+.ex{background:var(--card);border:1px solid var(--rule);border-radius:12px;padding:6px 16px}
+.ex div{padding:10px 0;border-top:1px solid var(--rule);font-size:14px}
+.ex div:first-child{border-top:0}
+.ex b{display:block}
+.ex span{color:var(--ink2);font-size:13.5px}
+.box{background:var(--card);border:1px solid var(--rule);border-left:3px solid var(--ac);border-radius:0 12px 12px 0;padding:12px 16px;font-size:14px}
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch;background:var(--card);border:1px solid var(--rule);border-radius:12px}
+table{border-collapse:collapse;width:100%;min-width:460px;font-size:13.5px}
+th{text-align:left;background:var(--acs);color:var(--ink2);font-size:12.5px;padding:8px 10px;white-space:nowrap}
+td{padding:8px 10px;border-top:1px solid var(--rule);white-space:nowrap}
+td.m{color:var(--mut)}
+.notes{font-size:12.5px;color:var(--mut);margin-top:22px}
+.notes ul{padding-left:1.2em;margin:6px 0} .notes li{margin:3px 0}
+</style></head><body><main class="wrap">
+
+<h1>为你整理的 J Gateway 在售房源</h1>
+<p class="sub">按预算 280 万筛选　挂牌信息截至 2026 年 10 月 2 日　价格均为总价（新元）</p>
+<p class="lead">在 J Gateway，280 万买到的是<b>四房（1,163–1,432 尺）或三房顶层</b>。标准三房最大只有 1,076 尺，今年成交约 195–220 万，用不满预算。我从目前在售的房源里挑了三套，每套都放上今年同面积的真实成交价，你可以直接对比挂价贵不贵。</p>
+
+<div class="facts">
+<div><b>2017 年建成</b>地契约剩 85 年</div>
+<div><b>738 户</b>两栋 38 层</div>
+<div><b>步行 2–4 分钟</b>Jurong East 换乘站</div>
+<div><b>楼下商场</b>JEM、Westgate</div>
+</div>
+
+<h2>推荐看的三套</h2>
+
+<article class="card">
+<div class="top"><h3><span class="no">1</span>四房 · 1,162 尺</h3><span class="tag t-wa">挂价偏高</span></div>
+<p class="price">S$ 2,800,000</p><p class="psf">S$ 2,410 psf</p>
+<div class="cmp"><div class="h">同面积近期成交（URA）</div>
+2026 年 4 月，26–30 楼：S$ 2,350,000<br>2025 年 7 月，26–30 楼：S$ 2,250,000
+<div class="d">挂价比今年成交高约 19%</div></div>
+<div class="pc"><div class="pro"><div class="h">优点</div><ul><li>四个房间，预算上限内</li><li>本盘四房中面积最小的户型，总价相对低</li></ul></div>
+<div class="con"><div class="h">要注意</div><ul><li>挂价比今年同面积成交高约 45 万</li><li>1,162 尺放四个房间，每间偏小</li></ul></div></div>
+</article>
+
+<article class="card">
+<div class="top"><h3><span class="no">2</span>三房顶层 · 1,485 尺</h3><span class="tag t-ok">挂价低于近期成交</span></div>
+<p class="price">S$ 2,588,000 <span class="tag t-ac">可议价</span></p><p class="psf">S$ 1,743 psf</p>
+<div class="cmp"><div class="h">同面积近期成交（URA）</div>
+2026 年 8 月，31–35 楼：S$ 2,638,000
+<div class="d">挂价比近期成交低约 2%</div></div>
+<div class="pc"><div class="pro"><div class="h">优点</div><ul><li>面积最大，有私人天台</li><li>价格不高于市场</li></ul></div>
+<div class="con"><div class="h">要注意</div><ul><li>已挂牌约 3 个月仍未售出</li><li>顶层户型上层天台一般要走楼梯，家中有老人要考虑</li><li>尺价低是因为面积含天台，室内实用面积以户型图为准</li></ul></div></div>
+</article>
+
+<article class="card">
+<div class="top"><h3><span class="no">3</span>三房 · 969 尺</h3><span class="tag t-ac">价格合理</span></div>
+<p class="price">S$ 1,990,000 <span class="tag t-ac">可议价</span></p><p class="psf">S$ 2,054 psf</p>
+<div class="cmp"><div class="h">同面积近期成交（URA）</div>
+2026 年 3 月，26–30 楼：S$ 2,200,000<br>2026 年 8 月，1–5 楼：S$ 1,950,000
+<div class="d">挂价在今年成交区间内</div></div>
+<div class="pc"><div class="pro"><div class="h">优点</div><ul><li>挂价贴近今年同面积成交价</li><li>预算留出约 80 万，可用于装修或降低贷款</li></ul></div>
+<div class="con"><div class="h">要注意</div><ul><li>只有三房两卫，面积在三个选项里最小</li><li>同价位在 Lakeville、Lakefront 能买到 1,100 尺以上的三房</li></ul></div></div>
+</article>
+
+<h2>另外几套暂不推荐</h2>
+<div class="ex">
+<div><b>三房 893 尺，挂 S$ 2,250,000</b><span>带租约，月租 5,600 到 2027 年 12 月 4 日，自住要等一年多。</span></div>
+<div><b>三房 969 尺，挂 S$ 2,600,000</b><span>比今年同面积成交（195–220 万）高约 18–33%。</span></div>
+<div><b>三房顶层 1,658 尺，挂 S$ 2,980,000</b><span>超出预算。</span></div>
+</div>
+
+<h2>J Gateway 2026 年三房以上成交（URA）</h2>
+<div class="tw"><table><thead><tr><th>月份</th><th>面积（尺）</th><th>楼层</th><th>成交价</th><th>尺价</th></tr></thead><tbody>
+<tr><td>2026-03</td><td>969</td><td>26–30</td><td>S$ 2,200,000</td><td>$2,271</td></tr>
+<tr><td>2026-04</td><td>1,163</td><td>26–30</td><td>S$ 2,350,000</td><td>$2,021</td></tr>
+<tr><td>2026-05</td><td>1,238</td><td>36–40</td><td>S$ 2,650,500</td><td>$2,141</td></tr>
+<tr><td>2026-06</td><td>947</td><td>1–5</td><td>S$ 1,950,000</td><td>$2,059</td></tr>
+<tr><td>2026-06</td><td>947</td><td>11–15</td><td>S$ 1,995,000</td><td>$2,106</td></tr>
+<tr><td>2026-07</td><td>893</td><td>26–30</td><td>S$ 1,998,800</td><td>$2,237</td></tr>
+<tr><td>2026-08</td><td>969</td><td>1–5</td><td>S$ 1,950,000</td><td>$2,013</td></tr>
+<tr><td>2026-08</td><td>1,485</td><td>31–35</td><td>S$ 2,638,000</td><td>$1,776</td></tr>
+</tbody></table></div>
+
+<section class="notes"><ul>
+<li>成交数据：URA 私宅成交记录（2026 年 10 月 2 日导出）。挂牌数据：PropertyGuru 公开挂牌，截至 2026 年 10 月 2 日，房源可能已售出或改价，以约看时确认的为准。</li>
+<li>URA 不记录房型，房型按面积和项目户型表推断，以户型图为准。楼层、朝向、景观会让同面积价格相差 5–10%。</li>
+<li>本页为公开市场数据整理，仅供参考，不构成投资或法律意见。</li>
+</ul></section>
+</main></body></html>
